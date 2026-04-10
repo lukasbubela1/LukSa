@@ -1262,8 +1262,7 @@
     const count = document.getElementById('playerCount');
 
     try {
-      const res = await fetch('https://api.mcsrvstat.us/3/including-washhouse.gl.joinmc.link');
-      const data = await res.json();
+         const res = await fetch('https://api.mcstatus.io/v2/status/java/including-washhouse.gl.joinmc.link');      const data = await res.json();
 
       if (data.online) {
         dot.className = 'status-dot';
