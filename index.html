@@ -76,7 +76,7 @@ nav.sc{background:rgba(5,6,10,.96);border-bottom-color:var(--bd2)}
 .hero-inner{position:relative;z-index:1;max-width:860px;animation:upFade .9s cubic-bezier(.22,1,.36,1) both}
 @keyframes upFade{from{opacity:0;transform:translateY(36px)}to{opacity:1;transform:none}}
 
-.badge{display:inline-flex;align-items:center;gap:9px;background:rgba(22,255,130,.07);border:1px solid rgba(22,255,130,.18);border-radius:100px;color:var(--g);font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:2px;padding:7px 18px 7px 12px;margin-bottom:2.25rem;text-transform:uppercase}
+.badge{display:inline-flex;align-items:center;gap:9px;background:rgba(22,255,130,.07);border:1px solid rgba(22,255,130,.18);border-radius:100px;color:var(--g);font-family:'JetBrains Mono',monospace;font-size:11px;padding:.6rem 1.2rem;letter-spacing:.8px;text-transform:uppercase}
 .bdot{width:8px;height:8px;border-radius:50%;background:var(--g);box-shadow:0 0 10px var(--g);animation:bp 2.5s ease-in-out infinite}
 @keyframes bp{0%,100%{opacity:1;box-shadow:0 0 10px var(--g)}50%{opacity:.35;box-shadow:0 0 4px var(--g)}}
 
@@ -87,7 +87,7 @@ nav.sc{background:rgba(5,6,10,.96);border-bottom-color:var(--bd2)}
 .hsub strong{color:var(--ink);font-weight:600}
 
 /* STATUS PANEL */
-.spanel{display:inline-flex;align-items:stretch;background:rgba(10,13,20,.9);border:1px solid var(--bd2);border-radius:16px;overflow:hidden;margin-bottom:2.75rem;backdrop-filter:blur(16px);box-shadow:0 16px 64px rgba(0,0,0,.6),inset 0 1px 0 rgba(255,255,255,.06)}
+.spanel{display:inline-flex;align-items:stretch;background:rgba(10,13,20,.9);border:1px solid var(--bd2);border-radius:16px;overflow:hidden;margin-bottom:2.75rem;backdrop-filter:blur(16px);box-shadow:0 8px 32px rgba(0,0,0,.3)}
 
 .si{display:flex;flex-direction:column;justify-content:center;align-items:center;padding:16px 24px;gap:5px;position:relative}
 .si+.si::before{content:'';position:absolute;left:0;top:18%;bottom:18%;width:1px;background:var(--bd)}
@@ -101,20 +101,20 @@ nav.sc{background:rgba(5,6,10,.96);border-bottom-color:var(--bd2)}
 .stxt{font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:500;color:var(--g);letter-spacing:1px}
 .stxt.off{color:var(--r)}
 
-.ipcopy{display:flex;align-items:center;gap:8px;background:rgba(22,255,130,.06);border:none;border-left:1px solid var(--bd);padding:0 22px;cursor:pointer;font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--ink2);transition:.2s;white-space:nowrap}
+.ipcopy{display:flex;align-items:center;gap:8px;background:rgba(22,255,130,.06);border:none;border-left:1px solid var(--bd);padding:0 22px;cursor:pointer;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--ink2);transition:.2s;letter-spacing:.5px}
 .ipcopy:hover{background:rgba(22,255,130,.12);color:var(--g)}
 
 /* BUTTONS */
 .hbtns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:3rem}
-.btnp{background:var(--g);color:#030b04;border:none;padding:16px 40px;font-family:'Outfit',sans-serif;font-size:16px;font-weight:700;border-radius:12px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:9px;box-shadow:0 4px 28px rgba(22,255,130,.35);transition:.22s cubic-bezier(.34,1.56,.64,1)}
+.btnp{background:var(--g);color:#030b04;border:none;padding:16px 40px;font-family:'Outfit',sans-serif;font-size:16px;font-weight:700;border-radius:12px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:9px;transition:.25s;box-shadow:0 4px 24px rgba(22,255,130,.25)}
 .btnp:hover{transform:translateY(-3px) scale(1.03);box-shadow:0 10px 48px rgba(22,255,130,.5),0 0 0 5px rgba(22,255,130,.1)}
-.btns{background:rgba(255,255,255,.04);color:var(--ink2);border:1px solid var(--bd2);padding:16px 34px;font-family:'Outfit',sans-serif;font-size:16px;font-weight:500;border-radius:12px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:9px;transition:.2s}
+.btns{background:rgba(255,255,255,.04);color:var(--ink2);border:1px solid var(--bd2);padding:16px 34px;font-family:'Outfit',sans-serif;font-size:16px;font-weight:500;border-radius:12px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:.2s}
 .btns:hover{background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.18)}
 
 .promo{display:inline-flex;align-items:center;gap:10px;background:rgba(240,192,64,.06);border:1px solid rgba(240,192,64,.16);border-radius:10px;padding:11px 22px;font-size:14px;color:var(--ink2)}
 .promo strong{color:var(--gold);font-weight:600}
 
-.scrl{position:absolute;bottom:2.5rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;color:var(--ink3);font-size:11px;font-family:'JetBrains Mono',monospace;letter-spacing:2px;text-transform:uppercase;animation:scrl 2s ease-in-out infinite}
+.scrl{position:absolute;bottom:2.5rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;color:var(--ink3);font-size:11px;font-family:'JetBrains Mono',monospace;letter-spacing:1.5px;animation:scrl 1.6s ease-in-out infinite;text-transform:uppercase}
 @keyframes scrl{0%,100%{opacity:.5;transform:translateX(-50%) translateY(0)}50%{opacity:.9;transform:translateX(-50%) translateY(6px)}}
 .scrl-line{width:1px;height:40px;background:linear-gradient(to bottom,transparent,var(--g),transparent)}
 
@@ -176,7 +176,7 @@ section{padding:100px 2rem;max-width:1140px;margin:0 auto}
 .ab2 li{font-size:14px;color:var(--ink2);line-height:1.75;padding-left:1.4rem;position:relative}
 .ab2 li::before{content:'›';position:absolute;left:0;color:var(--g);font-weight:700;font-size:16px;line-height:1.5}
 
-.pen{margin-top:1.1rem;padding:.6rem 1.1rem;background:rgba(255,51,102,.07);border-left:2px solid var(--r);border-radius:0 6px 6px 0;font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--r);letter-spacing:.3px}
+.pen{margin-top:1.1rem;padding:.6rem 1.1rem;background:rgba(255,51,102,.07);border-left:2px solid var(--r);border-radius:0 6px 6px 0;font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--r);opacity:.9}
 
 /* TEAM */
 .tgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem}
@@ -217,12 +217,12 @@ section{padding:100px 2rem;max-width:1140px;margin:0 auto}
 .fi2{background:var(--s1);border:1px solid var(--bd);border-radius:14px;padding:1.6rem;transition:border-color .2s}
 .fi2:hover{border-color:var(--bd2)}
 .fq{font-size:14.5px;font-weight:600;color:var(--ink);margin-bottom:.75rem;display:flex;gap:10px;align-items:flex-start}
-.fqm{background:rgba(22,255,130,.1);color:var(--g);width:24px;height:24px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:700;flex-shrink:0;margin-top:1px}
+.fqm{background:rgba(22,255,130,.1);color:var(--g);width:24px;height:24px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:700;flex-shrink:0}
 .fa{font-size:14px;color:var(--ink2);line-height:1.7;padding-left:34px}
 code{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--g);background:rgba(22,255,130,.07);padding:2px 7px;border-radius:5px}
 
 /* CTA BAND */
-.cta-band{background:linear-gradient(135deg,rgba(22,255,130,.08),rgba(77,166,255,.05));border:1px solid rgba(22,255,130,.15);border-radius:24px;padding:4rem 3rem;text-align:center;margin:0 auto 6rem;max-width:1140px;position:relative;overflow:hidden}
+.cta-band{background:linear-gradient(135deg,rgba(22,255,130,.08),rgba(77,166,255,.05));border:1px solid rgba(22,255,130,.15);border-radius:24px;padding:4rem 3rem;text-align:center;margin:0 auto 6rem;max-width:900px;position:relative}
 .cta-band::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(22,255,130,.5),transparent)}
 .cta-band h2{font-family:'Press Start 2P',monospace;font-size:clamp(14px,3vw,24px);color:#fff;line-height:1.6;margin-bottom:1.25rem}
 .cta-band p{color:var(--ink2);font-size:16px;margin-bottom:2.5rem}
@@ -239,7 +239,7 @@ footer{background:var(--s1);border-top:1px solid var(--bd);padding:4.5rem 2rem 2
 .fcopy{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--ink3);opacity:.4}
 
 /* TOAST */
-.toast{position:fixed;bottom:2rem;right:2rem;background:var(--g);color:#030b04;padding:13px 22px;font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:600;z-index:9999;border-radius:12px;box-shadow:0 8px 40px rgba(22,255,130,.4);transform:translateY(120%) scale(.9);opacity:0;transition:.35s cubic-bezier(.34,1.56,.64,1)}
+.toast{position:fixed;bottom:2rem;right:2rem;background:var(--g);color:#030b04;padding:13px 22px;font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:600;z-index:9999;border-radius:12px;box-shadow:0 8px 24px rgba(22,255,130,.3);opacity:0;transform:translateY(100px) scale(.8);transition:.35s cubic-bezier(.34,1.56,.64,1)}
 .toast.show{transform:translateY(0) scale(1);opacity:1}
 
 /* REVEAL */
@@ -307,7 +307,7 @@ footer{background:var(--s1);border-top:1px solid var(--bd);padding:4.5rem 2rem 2
         <span class="si-val" id="cnt">—</span>
       </div>
       <button class="ipcopy" onclick="copyIP()" title="Kopírovat IP">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2z"/></svg>
         including-washhouse.gl.joinmc.link
       </button>
     </div>
@@ -375,8 +375,8 @@ footer{background:var(--s1);border-top:1px solid var(--bd);padding:4.5rem 2rem 2
   </div>
 
   <div class="story rv">
-    <p>Server <span class="hl">LukSa</span> vznikl z vášně dvou kamarádů, kteří chtěli vytvořit férové a přátelské economy prostředí pro českou a slovenskou komunitu. Cílem bylo postavit server, kde záleží na férovosti, aktivní komunitě a zábavě — ne na pay-to-win mechanikách.</p>
-    <p>Projekt postupně rostl a přibyly i další členové týmu. Dnes LukSa nabízí plnohodnotný economy survival zážitek s vlastním ekonomickým systémem, ochranou pozemků, player shopy a pravidelnými eventy.</p>
+    <p>Server <span class="hl">LukSa</span> vznikl z vášně dvou kamarádů, kteří chtěli vytvořit férové a přátelské economy prostředí pro českou a slovenskou komunitu. Cílem bylo poskytnout alternativu k ostatním serverům, kde ekonomika a spravedlnost nejsou prioritou.</p>
+    <p>Projekt postupně rostl a přibyly i další členové týmu. Dnes LukSa nabízí plnohodnotný economy survival zážitek s vlastním ekonomickým systémem, ochranou pozemků, player shopy a mnohem více.</p>
   </div>
 </section>
 
@@ -392,15 +392,15 @@ footer{background:var(--s1);border-top:1px solid var(--bd);padding:4.5rem 2rem 2
   </div>
 
   <div class="rv">
-    <div class="acc"><div class="ah" onclick="tog(this)"><span class="acc-num">01</span><span class="acc-title">Obecná pravidla chování</span><span class="arr">▾</span></div><div class="ab2"><ul><li>Chovej se slušně a s respektem ke všem hráčům i adminům.</li><li>Zakazuje se nadávání, rasismus, diskriminace a toxické chování.</li><li>Zákaz spamu v chatu — opakování zpráv nebo příkazů.</li><li>Komunikuj v češtině nebo slovenštině v hlavním chatu.</li><li>Reklama na jiné servery je zakázána.</li></ul><div class="pen">⚠ Porušení: varování → mute → ban</div></div></div>
-    <div class="acc"><div class="ah" onclick="tog(this)"><span class="acc-num">02</span><span class="acc-title">Cheaty a zakázané modifikace</span><span class="arr">▾</span></div><div class="ab2"><ul><li>Zakazují se veškeré cheaty: fly hack, speed hack, kill aura, X-Ray atd.</li><li>Povoleny jsou pouze vizuální mody (OptiFine, shadery, minimapa bez hráčů).</li><li>Zneužití bugů nebo exploitů je zakázáno — nahlaste je adminům.</li><li>Automatické farmy a AFK farmy musí být schváleny adminem.</li></ul><div class="pen">⚠ Porušení: okamžitý permanentní ban</div></div></div>
-    <div class="acc"><div class="ah" onclick="tog(this)"><span class="acc-num">03</span><span class="acc-title">PvP pravidla</span><span class="arr">▾</span></div><div class="ab2"><ul><li>PvP je povoleno POUZE v designovaných PvP arénách.</li><li>Zabíjení hráčů mimo arény je přísně zakázáno.</li><li>Trap-killing (lákání hráčů do pasti) je zakázáno.</li><li>Spawn killing v arénách je povolen, mimo arény zakázán.</li></ul><div class="pen">⚠ Porušení: varování → tempban → ban</div></div></div>
-    <div class="acc"><div class="ah" onclick="tog(this)"><span class="acc-num">04</span><span class="acc-title">Griefing a krádež</span><span class="arr">▾</span></div><div class="ab2"><ul><li>Griefing (ničení cizích staveb) je přísně zakázán.</li><li>Krádež z nechráněných truhlic je zakázána.</li><li>Ochraň si svůj pozemek pomocí Residence — nechráněný majetek je na vlastní riziko.</li><li>Blokování spawnu, obchodů nebo důležitých míst je zakázáno.</li></ul><div class="pen">⚠ Porušení: rollback + ban</div></div></div>
-    <div class="acc"><div class="ah" onclick="tog(this)"><span class="acc-num">05</span><span class="acc-title">Economy pravidla</span><span class="arr">▾</span></div><div class="ab2"><ul><li>Podvod při obchodování je zakázán.</li><li>Duplication bugů je zakázána — hlaste je adminům.</li><li>Manipulace s trhem (cornering) může být potrestána.</li><li>Real-money obchodování s herními předměty je zakázáno.</li></ul><div class="pen">⚠ Porušení: ekonomický reset + ban</div></div></div>
-    <div class="acc"><div class="ah" onclick="tog(this)"><span class="acc-num">06</span><span class="acc-title">Komunikace a sociální sítě</span><span class="arr">▾</span></div><div class="ab2"><ul><li>Na Discordu platí stejná pravidla jako na serveru.</li><li>Zákaz sdílení osobních údajů jiných hráčů bez jejich souhlasu.</li><li>Nahlášení problémů přes Discord — ne v herním chatu.</li><li>Rozhodnutí adminů jsou konečná, diskuze přes Discord tickety.</li></ul></div></div>
-    <div class="acc"><div class="ah" onclick="tog(this)"><span class="acc-num">07</span><span class="acc-title">Stavění a pozemky</span><span class="arr">▾</span></div><div class="ab2"><ul><li>Claimuj si pozemek pomocí /res create před stavěním.</li><li>Nesmíš stavět přímo na hranici cizí residence.</li><li>Lags-inducing farmy (lagovací redstone) jsou zakázány.</li><li>V lobby světě je stavění zakázáno bez povolení admina.</li></ul></div></div>
-    <div class="acc"><div class="ah" onclick="tog(this)"><span class="acc-num">08</span><span class="acc-title">Účty a bezpečnost</span><span class="arr">▾</span></div><div class="ab2"><ul><li>Každý hráč smí mít pouze jeden účet.</li><li>Sdílení účtu je zakázáno.</li><li>Použij silné heslo pro /register — server používá AuthMe ochranu.</li><li>Za kompromitovaný účet nenese server zodpovědnost.</li></ul></div></div>
-    <div class="acc"><div class="ah" onclick="tog(this)"><span class="acc-num">09</span><span class="acc-title">Sankce a odvolání</span><span class="arr">▾</span></div><div class="ab2"><ul><li>Varování → Mute/Tempban → Permanentní ban (záleží na závažnosti).</li><li>Závažná porušení = okamžitý permanentní ban bez varování.</li><li>Odvolání banů pouze přes Discord tickety.</li><li>Falešná odvolání mohou vést k prodloužení trestu.</li></ul></div></div>
+    <div class="acc"><div class="ah" onclick="tog(this)"><span class="acc-num">01</span><span class="acc-title">Obecná pravidla chování</span><span class="arr">▾</span></div><div class="ab2"><ul><li>Chování a komunikace jsou klíčové — buď přátelský a respektující ostatní hráče.</li><li>Nadávání, toxicita, rasismus, sexismus a podobné projevy nejsou tolerovány.</li><li>Spamování chatů, linků a opakovacích zpráv je zakázáno.</li></ul></div></div>
+    <div class="acc"><div class="ah" onclick="tog(this)"><span class="acc-num">02</span><span class="acc-title">Cheaty a zakázané modifikace</span><span class="arr">▾</span></div><div class="ab2"><ul><li>Hacking, cheaty, exploity a neautorizované modifikace jsou zakázány.</li><li>Pouze whitelisted modifikace jsou povoleny (např. Sodium, Lunar Client bez cheatu).</li><li>Porušení vede k okamžitému BAN bez varování.</li></ul></div></div>
+    <div class="acc"><div class="ah" onclick="tog(this)"><span class="acc-num">03</span><span class="acc-title">PvP pravidla</span><span class="arr">▾</span></div><div class="ab2"><ul><li>PvP je povoleno POUZE v designovaných PvP arenách.</li><li>PvP mimo arény vede k sankcím.</li><li>Kamikadžové a grief-PvP nejsou tolerovány.</li></ul></div></div>
+    <div class="acc"><div class="ah" onclick="tog(this)"><span class="acc-num">04</span><span class="acc-title">Griefing a krádež</span><span class="arr">▾</span></div><div class="ab2"><ul><li>Griefing (ničení staveb ostatních) je zakázán a bude trestán.</li><li>Krádež z ochráněných pozemků je nemožná (claim systém).</li><li>Krádež ze neochráněných oblastí je na vlastní riziko.</li></ul></div></div>
+    <div class="acc"><div class="ah" onclick="tog(this)"><span class="acc-num">05</span><span class="acc-title">Economy pravidla</span><span class="arr">▾</span></div><div class="ab2"><ul><li>Podvody, RMT (ničení currency IRL) a manipulace ekonomiky jsou zakázány.</li><li>Podstatný transfer coinů mezi účty bez justifikace bude vyšetřován.</li><li>Porušení ekonomických pravidel vede k bannutí a odebrání items.</li></ul></div></div>
+    <div class="acc"><div class="ah" onclick="tog(this)"><span class="acc-num">06</span><span class="acc-title">Komunikace a sociální sítě</span><span class="arr">▾</span></div><div class="ab2"><ul><li>Slušnost v chatu je povinná — žádného toxického chování.</li><li>Propagace konkurenčních serverů je zakázána.</li><li>NSFW obsah a politika jsou mimo Discord a server.</li></ul></div></div>
+    <div class="acc"><div class="ah" onclick="tog(this)"><span class="acc-num">07</span><span class="acc-title">Stavění a pozemky</span><span class="arr">▾</span></div><div class="ab2"><ul><li>Claimnout si můžeš pozemek, kde jej ještě nikdo nemá.</li><li>Opuštěné stavby delší než 30 dní bez aktivity mohou být smazány.</li><li>Soubory s redundantnými stavbami budou odstraněny.</li></ul></div></div>
+    <div class="acc"><div class="ah" onclick="tog(this)"><span class="acc-num">08</span><span class="acc-title">Účty a bezpečnost</span><span class="arr">▾</span></div><div class="ab2"><ul><li>Každý hráč má jeden jediný účet — více účtů bude bannutí.</li><li>Prodej a sdílení účtů není povoleno.</li><li>Admin nekontrolují hesla — měj si je v bezpečí!</li></ul></div></div>
+    <div class="acc"><div class="ah" onclick="tog(this)"><span class="acc-num">09</span><span class="acc-title">Sankce a odvolání</span><span class="arr">▾</span></div><div class="ab2"><ul><li>Varování → Mute → Kick → Ban (dle závažnosti).</li><li>Permanentní bany jsou vydávány za kritické porušení pravidel.</li><li>Odvolání se podávají přes Discord — kontaktuj Admin.</li><li class="pen">⚠ Pravidla se mohou změnit — sleduj Discord pro aktualizace!</li></ul></div></div>
   </div>
 </section>
 
@@ -424,7 +424,7 @@ footer{background:var(--s1);border-top:1px solid var(--bd);padding:4.5rem 2rem 2
   <div class="sgrid rv">
     <a href="https://discord.gg/k8VsYdkRwz" target="_blank" class="sc2 dc"><span class="sico">💬</span><div class="sname">Discord</div><div class="sdesc">Podpora, eventy, komunita</div></a>
     <a href="https://whatsapp.com/channel/0029VbCXXUA3bbV8vS8YRL0z" target="_blank" class="sc2 wa"><span class="sico">📱</span><div class="sname">WhatsApp</div><div class="sdesc">Kanál s novinkami</div></a>
-    <a href="#" class="sc2 ig" style="opacity:.4;cursor:default"><span class="sico">📸</span><div class="sname">Instagram</div><div class="sdesc">Již brzy...</div></a>
+    <a href="https://www.instagram.com/luksa_server/" target="_blank" class="sc2 ig"><span class="sico">📸</span><div class="sname">Instagram</div><div class="sdesc">Fotky a updaty</div></a>
   </div>
   <p style="margin-top:2rem;text-align:center;color:var(--ink2);font-size:14px">Problémy nebo dotazy? Kontaktuj nás přes Discord — nejrychlejší odpověď garantována.</p>
 </section>
@@ -435,12 +435,12 @@ footer{background:var(--s1);border-top:1px solid var(--bd);padding:4.5rem 2rem 2
 <section id="faq">
   <div class="sh rv"><span class="sh-tag">// jak začít</span><h2 class="sh-title">Časté dotazy</h2><div class="sh-line"></div></div>
   <div class="fgrid rv">
-    <div class="fi2"><div class="fq"><span class="fqm">?</span>Jak se přihlásím?</div><div class="fa">Po připojení napiš <code>/register heslo heslo</code> pro registraci. Při každém dalším přihlášení použij <code>/login heslo</code>.</div></div>
-    <div class="fi2"><div class="fq"><span class="fqm">?</span>Jak si claimnout pozemek?</div><div class="fa">Vezmi dřevěnou sekeru, levým klikem označ první roh, pravým druhý, pak napiš <code>/res create nazev</code>.</div></div>
-    <div class="fi2"><div class="fq"><span class="fqm">?</span>Jak otevřít vlastní shop?</div><div class="fa">Postav truhlici, dej vedle cedulku: tvoje jméno / množství / B cena ? / název itemu.</div></div>
-    <div class="fi2"><div class="fq"><span class="fqm">?</span>Kde jsou PvP arény?</div><div class="fa">PvP arény najdeš v lobby světě. Použij NPC portál nebo <code>/warp arena</code> pro teleport.</div></div>
-    <div class="fi2"><div class="fq"><span class="fqm">?</span>Jak získám LukSa Coins?</div><div class="fa">Prodávej itemy, absolvuj parkour trasy, zúčastni se eventů nebo obchoduj s ostatními hráči.</div></div>
-    <div class="fi2"><div class="fq"><span class="fqm">?</span>Jaké verze Minecraftu fungují?</div><div class="fa">Server podporuje verze 1.16 až 1.21+. Doporučujeme aktuální verzi pro nejlepší zážitek.</div></div>
+    <div class="fi2"><div class="fq"><span class="fqm">?</span>Jak se přihlásím?</div><div class="fa">Po připojení napiš <code>/register heslo heslo</code> pro registraci. Při každém dalším připojení se přihlaš přes <code>/login heslo</code>.</div></div>
+    <div class="fi2"><div class="fq"><span class="fqm">?</span>Jak si claimnout pozemek?</div><div class="fa">Vezmi dřevěnou sekeru, levým klikem označ první roh, pravým druhý, pak napiš <code>/res create název</code> pro vytvoření claimu.</div></div>
+    <div class="fi2"><div class="fq"><span class="fqm">?</span>Jak otevřít vlastní shop?</div><div class="fa">Postav truhlici, dej vedle cedulku: tvoje jméno / množství / B cena ? / název itemu. Prodeji spustí automaticky!</div></div>
+    <div class="fi2"><div class="fq"><span class="fqm">?</span>Kde jsou PvP arény?</div><div class="fa">PvP arény najdeš v lobby světě. Použij NPC portál nebo <code>/warp arena</code> pro teleportaci. Mimo arény je PvP zakázán!</div></div>
+    <div class="fi2"><div class="fq"><span class="fqm">?</span>Jak získám LukSa Coins?</div><div class="fa">Prodávej itemy, absolvuj parkour trasy, zúčastni se eventů nebo obchoduj s ostatními hráči. Začni s 500 coinů!</div></div>
+    <div class="fi2"><div class="fq"><span class="fqm">?</span>Jaké verze Minecraftu fungují?</div><div class="fa">Server podporuje verze 1.16 až 1.21+. Doporučujeme aktuální verzi pro nejlepší výkon a kompatibilitu.</div></div>
   </div>
 </section>
 
@@ -449,7 +449,7 @@ footer{background:var(--s1);border-top:1px solid var(--bd);padding:4.5rem 2rem 2
   <h2>Připoj se ještě dnes</h2>
   <p>Čeká na tebe ekonomika, komunita a spousta zábavy.</p>
   <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
-    <a href="#" class="btnp" onclick="copyIP();return false"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M14 6l6 6-6 6"/></svg>Kopírovat IP</a>
+    <a href="#" class="btnp" onclick="copyIP();return false"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M14 6l6 6-6 6"/></svg> Připojit se</a>
     <a href="https://discord.gg/k8VsYdkRwz" target="_blank" class="btns">Připojit Discord</a>
   </div>
 </div>
@@ -474,7 +474,7 @@ function rsz(){W=cv.width=innerWidth;H=cv.height=innerHeight}
 rsz();window.addEventListener('resize',rsz);
 class P{
   constructor(){this.init(true)}
-  init(r){this.x=Math.random()*W;this.y=r?Math.random()*H:H+8;this.s=Math.random()*1.4+.3;this.vx=(Math.random()-.5)*.25;this.vy=-(Math.random()*.35+.08);this.a=Math.random()*.35+.06;this.c=Math.random()>.72?`rgba(255,107,26,${this.a})`:`rgba(22,255,130,${this.a})`}
+  init(r){this.x=Math.random()*W;this.y=r?Math.random()*H:H+8;this.s=Math.random()*1.4+.3;this.vx=(Math.random()-.5)*.25;this.vy=-(Math.random()*.35+.08);this.a=Math.random()*.35+.06;this.c=`hsla(${Math.random()*60+150},100%,60%,${this.a})`}
   tick(){this.x+=this.vx;this.y+=this.vy;if(this.y<-8||this.x<-8||this.x>W+8)this.init(false)}
   draw(){cx.beginPath();cx.arc(this.x,this.y,this.s,0,Math.PI*2);cx.fillStyle=this.c;cx.fill()}
 }
