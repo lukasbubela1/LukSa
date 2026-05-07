@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="cs">
 <head>
@@ -37,7 +38,232 @@
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--ink);font-family:'Outfit',sans-serif;font-size:16px;line-height:1.65;overflow-x:hidden}
 
-/* ... ostatní CSS beze změn ... */
+/* AURORA */
+.aurora{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+.ab1{position:absolute;border-radius:50%;filter:blur(80px)}
+.b1{width:900px;height:600px;top:-200px;left:-200px;background:radial-gradient(circle,rgba(22,255,130,.14),transparent 70%);animation:d1 18s ease-in-out infinite alternate}
+.b2{width:700px;height:500px;top:30%;right:-150px;background:radial-gradient(circle,rgba(77,166,255,.1),transparent 70%);animation:d2 22s ease-in-out infinite alternate}
+.b3{width:600px;height:500px;bottom:-100px;left:20%;background:radial-gradient(circle,rgba(255,107,26,.08),transparent 70%);animation:d3 15s ease-in-out infinite alternate}
+@keyframes d1{to{transform:translate(80px,60px) scale(1.15)}}
+@keyframes d2{to{transform:translate(-60px,40px) scale(.9)}}
+@keyframes d3{to{transform:translate(40px,-80px) scale(1.1)}}
+
+.grid-ov{position:fixed;inset:0;pointer-events:none;z-index:0;
+  background-image:linear-gradient(rgba(22,255,130,.022) 1px,transparent 1px),linear-gradient(90deg,rgba(22,255,130,.022) 1px,transparent 1px);
+  background-size:50px 50px;mask-image:radial-gradient(ellipse 100% 100% at 50% 0%,black 0%,transparent 80%)}
+
+#cv{position:fixed;inset:0;pointer-events:none;z-index:0}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;height:66px;display:flex;align-items:center;justify-content:space-between;padding:0 2.5rem;
+  background:rgba(5,6,10,.8);backdrop-filter:blur(24px) saturate(180%);border-bottom:1px solid var(--bd);transition:.3s}
+nav.sc{background:rgba(5,6,10,.96);border-bottom-color:var(--bd2)}
+
+.logo{font-family:'Press Start 2P',monospace;font-size:14px;color:#fff;text-decoration:none;letter-spacing:2px}
+.logo em{color:var(--g);font-style:normal;text-shadow:0 0 20px rgba(22,255,130,.5)}
+
+.nl{display:flex;align-items:center;gap:.2rem;list-style:none}
+.nl a{color:var(--ink2);text-decoration:none;font-size:13px;font-weight:500;padding:.45rem .9rem;border-radius:8px;transition:.2s;letter-spacing:.3px}
+.nl a:hover{color:#fff;background:rgba(255,255,255,.07)}
+.nl .cta{background:var(--g);color:#030b04 !important;font-weight:700 !important;border-radius:10px;padding:.5rem 1.25rem !important;box-shadow:0 0 24px rgba(22,255,130,.3)}
+.nl .cta:hover{background:#fff !important;box-shadow:0 0 36px rgba(22,255,130,.5);transform:translateY(-1px)}
+
+.hbg{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px}
+.hbg span{display:block;width:22px;height:2px;background:var(--ink2);border-radius:2px;transition:.3s}
+
+/* HERO */
+#home{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:100px 2rem 5rem;position:relative;text-align:center;overflow:hidden}
+
+.hero-inner{position:relative;z-index:1;max-width:860px;animation:upFade .9s cubic-bezier(.22,1,.36,1) both}
+@keyframes upFade{from{opacity:0;transform:translateY(36px)}to{opacity:1;transform:none}}
+
+.badge{display:inline-flex;align-items:center;gap:9px;background:rgba(22,255,130,.07);border:1px solid rgba(22,255,130,.18);border-radius:100px;color:var(--g);font-family:'JetBrains Mono',monospace;font-size:11px;padding:.6rem 1.2rem;letter-spacing:.8px;text-transform:uppercase}
+.bdot{width:8px;height:8px;border-radius:50%;background:var(--g);box-shadow:0 0 10px var(--g);animation:bp 2.5s ease-in-out infinite}
+@keyframes bp{0%,100%{opacity:1;box-shadow:0 0 10px var(--g)}50%{opacity:.35;box-shadow:0 0 4px var(--g)}}
+
+.htitle{font-family:'Press Start 2P',monospace;font-size:clamp(44px,9vw,90px);line-height:1.2;color:#fff;margin-bottom:1.5rem;letter-spacing:-2px}
+.htitle .gg{color:var(--g);text-shadow:0 0 40px rgba(22,255,130,.55),0 0 90px rgba(22,255,130,.25)}
+
+.hsub{font-size:19px;color:var(--ink2);font-weight:400;margin-bottom:2.75rem;letter-spacing:.3px}
+.hsub strong{color:var(--ink);font-weight:600}
+
+/* STATUS PANEL */
+.spanel{display:inline-flex;align-items:stretch;background:rgba(10,13,20,.9);border:1px solid var(--bd2);border-radius:16px;overflow:hidden;margin-bottom:2.75rem;backdrop-filter:blur(16px);box-shadow:0 8px 32px rgba(0,0,0,.3)}
+
+.si{display:flex;flex-direction:column;justify-content:center;align-items:center;padding:16px 24px;gap:5px;position:relative}
+.si+.si::before{content:'';position:absolute;left:0;top:18%;bottom:18%;width:1px;background:var(--bd)}
+.si-lbl{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--ink3);letter-spacing:1.5px;text-transform:uppercase}
+.si-val{font-family:'Press Start 2P',monospace;font-size:16px;color:#fff;line-height:1}
+
+.s-status{display:flex;align-items:center;gap:9px;padding:16px 22px}
+.sdot{width:10px;height:10px;border-radius:50%;background:var(--g);box-shadow:0 0 10px var(--g),0 0 20px rgba(22,255,130,.35);animation:sp 2.5s ease-in-out infinite;flex-shrink:0}
+.sdot.off{background:var(--r);box-shadow:0 0 8px var(--r);animation:none}
+@keyframes sp{0%,100%{box-shadow:0 0 10px var(--g),0 0 20px rgba(22,255,130,.35)}50%{box-shadow:0 0 4px var(--g)}}
+.stxt{font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:500;color:var(--g);letter-spacing:1px}
+.stxt.off{color:var(--r)}
+
+.ipcopy{display:flex;align-items:center;gap:8px;background:rgba(22,255,130,.06);border:none;border-left:1px solid var(--bd);padding:0 22px;cursor:pointer;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--ink2);transition:.2s;letter-spacing:.5px}
+.ipcopy:hover{background:rgba(22,255,130,.12);color:var(--g)}
+
+/* BUTTONS */
+.hbtns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:3rem}
+.btnp{background:var(--g);color:#030b04;border:none;padding:16px 40px;font-family:'Outfit',sans-serif;font-size:16px;font-weight:700;border-radius:12px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:9px;transition:.25s;box-shadow:0 4px 24px rgba(22,255,130,.25)}
+.btnp:hover{transform:translateY(-3px) scale(1.03);box-shadow:0 10px 48px rgba(22,255,130,.5),0 0 0 5px rgba(22,255,130,.1)}
+.btns{background:rgba(255,255,255,.04);color:var(--ink2);border:1px solid var(--bd2);padding:16px 34px;font-family:'Outfit',sans-serif;font-size:16px;font-weight:500;border-radius:12px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:.2s}
+.btns:hover{background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.18)}
+
+.promo{display:inline-flex;align-items:center;gap:10px;background:rgba(240,192,64,.06);border:1px solid rgba(240,192,64,.16);border-radius:10px;padding:11px 22px;font-size:14px;color:var(--ink2)}
+.promo strong{color:var(--gold);font-weight:600}
+
+.scrl{position:absolute;bottom:2.5rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;color:var(--ink3);font-size:11px;font-family:'JetBrains Mono',monospace;letter-spacing:1.5px;animation:scrl 1.6s ease-in-out infinite;text-transform:uppercase}
+@keyframes scrl{0%,100%{opacity:.5;transform:translateX(-50%) translateY(0)}50%{opacity:.9;transform:translateX(-50%) translateY(6px)}}
+.scrl-line{width:1px;height:40px;background:linear-gradient(to bottom,transparent,var(--g),transparent)}
+
+/* SEPARATOR */
+.sep{height:1px;background:linear-gradient(90deg,transparent,var(--bd2),transparent)}
+
+/* SECTIONS */
+section{padding:100px 2rem;max-width:1140px;margin:0 auto}
+
+.sh{text-align:center;margin-bottom:4rem}
+.sh-tag{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--g);letter-spacing:3px;text-transform:uppercase;display:block;margin-bottom:.75rem;opacity:.75}
+.sh-title{font-family:'Press Start 2P',monospace;font-size:clamp(13px,2.2vw,20px);color:#fff;line-height:1.6}
+.sh-line{width:50px;height:2px;background:linear-gradient(90deg,var(--g),var(--o));border-radius:2px;margin:1.25rem auto 0}
+
+/* FEATURES MOSAIC */
+.mosaic{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--bd);border:1px solid var(--bd);border-radius:20px;overflow:hidden}
+.mosaic .fc:nth-child(1){grid-column:span 2}
+.mosaic .fc:nth-child(6){grid-column:span 2}
+
+.fc{background:var(--s1);padding:2.25rem;position:relative;overflow:hidden;transition:background .25s}
+.fc::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 0% 100%,rgba(22,255,130,.04) 0%,transparent 60%);opacity:0;transition:.3s;pointer-events:none}
+.fc:hover{background:var(--s2)}
+.fc:hover::before{opacity:1}
+.fi{font-size:30px;margin-bottom:1.25rem;display:block}
+.fc h3{font-size:15.5px;font-weight:700;color:#fff;margin-bottom:.65rem}
+.fc p{font-size:14px;color:var(--ink2);line-height:1.7}
+
+.chip{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:1px;padding:3px 9px;border-radius:5px;margin-bottom:.75rem;text-transform:uppercase}
+.chip-g{background:rgba(22,255,130,.1);color:var(--g)}
+.chip-o{background:rgba(255,107,26,.1);color:var(--o2)}
+.chip-b{background:rgba(77,166,255,.1);color:var(--b)}
+
+.story{background:linear-gradient(135deg,var(--s2),var(--s1));border:1px solid var(--bd2);border-radius:20px;padding:3rem;margin-top:1.5rem;position:relative;overflow:hidden}
+.story::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(22,255,130,.4),transparent)}
+.story::after{content:'"';position:absolute;top:-20px;right:2rem;font-size:200px;color:rgba(22,255,130,.04);font-family:Georgia,serif;line-height:1}
+.story p{font-size:15px;color:var(--ink2);line-height:1.85;position:relative}
+.story p+p{margin-top:1rem}
+.story .hl{color:var(--g);font-weight:600}
+
+/* RULES */
+#rules{max-width:880px}
+
+.acc{border:1px solid var(--bd);border-radius:12px;overflow:hidden;margin-bottom:.75rem;transition:border-color .2s}
+.acc:hover{border-color:var(--bd2)}
+
+.ah{background:var(--s1);padding:1.15rem 1.6rem;cursor:pointer;display:flex;align-items:center;gap:1rem;user-select:none;transition:background .2s}
+.ah:hover,.ah.open{background:var(--s2)}
+.ah.open{border-bottom:1px solid var(--bd)}
+
+.acc-num{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--g);opacity:.7;flex-shrink:0}
+.acc-title{font-size:14px;font-weight:600;color:var(--ink);flex:1}
+.arr{color:var(--ink3);font-size:16px;transition:transform .3s cubic-bezier(.34,1.56,.64,1);flex-shrink:0;margin-left:auto}
+.ah.open .arr{transform:rotate(180deg);color:var(--g)}
+
+.ab2{background:var(--s1);max-height:0;overflow:hidden;transition:max-height .4s ease,padding .3s;padding:0 1.6rem}
+.ab2.open{max-height:600px;padding:1.6rem}
+
+.ab2 ul{list-style:none;display:flex;flex-direction:column;gap:.6rem}
+.ab2 li{font-size:14px;color:var(--ink2);line-height:1.75;padding-left:1.4rem;position:relative}
+.ab2 li::before{content:'›';position:absolute;left:0;color:var(--g);font-weight:700;font-size:16px;line-height:1.5}
+
+.pen{margin-top:1.1rem;padding:.6rem 1.1rem;background:rgba(255,51,102,.07);border-left:2px solid var(--r);border-radius:0 6px 6px 0;font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--r);opacity:.9}
+
+/* TEAM */
+.tgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem}
+
+.tcard{background:var(--s1);border:1px solid var(--bd);border-radius:18px;padding:2.5rem 2rem;text-align:center;transition:.35s cubic-bezier(.34,1.56,.64,1);position:relative;overflow:hidden}
+.tcard::after{content:'';position:absolute;inset:0;opacity:0;transition:.3s;pointer-events:none}
+.tcard.own::after{background:radial-gradient(circle at 50% 0%,rgba(255,51,102,.06),transparent 60%)}
+.tcard.co::after{background:radial-gradient(circle at 50% 0%,rgba(255,107,26,.06),transparent 60%)}
+.tcard.adm::after{background:radial-gradient(circle at 50% 0%,rgba(77,166,255,.06),transparent 60%)}
+.tcard:hover{transform:translateY(-8px);border-color:var(--bd2)}
+.tcard:hover::after{opacity:1}
+.tcard::before{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;opacity:0;transition:.3s}
+.tcard.own::before{background:linear-gradient(90deg,transparent,#ff4466,transparent)}
+.tcard.co::before{background:linear-gradient(90deg,transparent,var(--o),transparent)}
+.tcard.adm::before{background:linear-gradient(90deg,transparent,var(--b),transparent)}
+.tcard:hover::before{opacity:1}
+
+.tav{width:76px;height:76px;margin:0 auto 1.4rem;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:34px;background:var(--s3);border:1px solid var(--bd)}
+.tname{font-family:'JetBrains Mono',monospace;font-size:13.5px;font-weight:500;color:#fff;margin-bottom:.65rem}
+.trole{font-size:11.5px;font-weight:700;letter-spacing:2px;text-transform:uppercase}
+.r-own{color:#ff6680}.r-co{color:var(--o2)}.r-adm{color:var(--b)}
+
+/* SOCIAL */
+.sgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:1.25rem}
+
+.sc2{background:var(--s1);border:1px solid var(--bd);border-radius:18px;padding:2.5rem;text-align:center;text-decoration:none;display:block;transition:.35s cubic-bezier(.34,1.56,.64,1)}
+.sc2:hover{transform:translateY(-6px)}
+.sc2.dc:hover{border-color:rgba(88,101,242,.5);box-shadow:0 12px 48px rgba(88,101,242,.15)}
+.sc2.wa:hover{border-color:rgba(37,211,102,.5);box-shadow:0 12px 48px rgba(37,211,102,.12)}
+.sc2.ig:hover{border-color:rgba(225,48,108,.4);box-shadow:0 12px 48px rgba(225,48,108,.1)}
+
+.sico{font-size:40px;display:block;margin-bottom:1.1rem}
+.sname{font-size:16px;font-weight:700;color:#fff;margin-bottom:.4rem}
+.sdesc{font-size:13px;color:var(--ink3)}
+
+/* FAQ */
+.fgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1.25rem}
+.fi2{background:var(--s1);border:1px solid var(--bd);border-radius:14px;padding:1.6rem;transition:border-color .2s}
+.fi2:hover{border-color:var(--bd2)}
+.fq{font-size:14.5px;font-weight:600;color:var(--ink);margin-bottom:.75rem;display:flex;gap:10px;align-items:flex-start}
+.fqm{background:rgba(22,255,130,.1);color:var(--g);width:24px;height:24px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:700;flex-shrink:0}
+.fa{font-size:14px;color:var(--ink2);line-height:1.7;padding-left:34px}
+code{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--g);background:rgba(22,255,130,.07);padding:2px 7px;border-radius:5px}
+
+/* CTA BAND */
+.cta-band{background:linear-gradient(135deg,rgba(22,255,130,.08),rgba(77,166,255,.05));border:1px solid rgba(22,255,130,.15);border-radius:24px;padding:4rem 3rem;text-align:center;margin:0 auto 6rem;max-width:900px;position:relative}
+.cta-band::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(22,255,130,.5),transparent)}
+.cta-band h2{font-family:'Press Start 2P',monospace;font-size:clamp(14px,3vw,24px);color:#fff;line-height:1.6;margin-bottom:1.25rem}
+.cta-band p{color:var(--ink2);font-size:16px;margin-bottom:2.5rem}
+
+/* FOOTER */
+footer{background:var(--s1);border-top:1px solid var(--bd);padding:4.5rem 2rem 2.5rem;text-align:center}
+.flogo{font-family:'Press Start 2P',monospace;font-size:18px;color:#fff;margin-bottom:.7rem;display:inline-block}
+.flogo em{color:var(--g);font-style:normal;text-shadow:0 0 16px rgba(22,255,130,.4)}
+.ftag{font-size:14px;color:var(--ink3);margin-bottom:2rem}
+.flinks{display:flex;gap:.25rem;justify-content:center;flex-wrap:wrap;margin-bottom:2rem}
+.flinks a{color:var(--ink3);text-decoration:none;font-size:13px;padding:.35rem .8rem;border-radius:7px;transition:.2s}
+.flinks a:hover{color:var(--ink);background:rgba(255,255,255,.05)}
+.fgdpr{max-width:580px;margin:0 auto 1.75rem;font-size:12px;color:var(--ink3);line-height:1.6;opacity:.7}
+.fcopy{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--ink3);opacity:.4}
+
+/* TOAST */
+.toast{position:fixed;bottom:2rem;right:2rem;background:var(--g);color:#030b04;padding:13px 22px;font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:600;z-index:9999;border-radius:12px;box-shadow:0 8px 24px rgba(22,255,130,.3);opacity:0;transform:translateY(100px) scale(.8);transition:.35s cubic-bezier(.34,1.56,.64,1)}
+.toast.show{transform:translateY(0) scale(1);opacity:1}
+
+/* REVEAL */
+.rv{opacity:0;transform:translateY(32px);transition:opacity .7s ease,transform .7s cubic-bezier(.22,1,.36,1)}
+.rv.vis{opacity:1;transform:none}
+
+/* MOBILE */
+@media(max-width:768px){
+  nav{padding:0 1.25rem}
+  .nl{display:none;flex-direction:column;position:fixed;top:66px;left:0;right:0;background:rgba(5,6,10,.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--bd);padding:1rem;gap:.25rem;z-index:999}
+  .nl.open{display:flex}
+  .nl a{display:block;padding:.8rem 1rem}
+  .nl .cta{text-align:center;margin-top:.5rem}
+  .hbg{display:flex}
+  .spanel{flex-direction:column;width:90%;max-width:340px}
+  .si+.si::before{top:0;left:10%;right:10%;bottom:auto;height:1px;width:auto}
+  .ipcopy{border-left:none;border-top:1px solid var(--bd);width:100%;justify-content:center;padding:14px}
+  .htitle{font-size:34px;letter-spacing:0}
+  .mosaic{grid-template-columns:1fr}
+  .mosaic .fc:nth-child(1),.mosaic .fc:nth-child(6){grid-column:auto}
+  section{padding:70px 1.25rem}
+  .cta-band{margin:0 1.25rem 4rem;padding:2.5rem 1.5rem}
+}
 </style>
 </head>
 <body>
@@ -60,7 +286,7 @@ body{background:var(--bg);color:var(--ink);font-family:'Outfit',sans-serif;font-
     <li><a href="#team">Tým</a></li>
     <li><a href="#social">Kontakt</a></li>
     <li><a href="#faq">FAQ</a></li>
-    <li><a href="#" class="cta" onclick="copyIP(event)">⚔ Připojit se</a></li>
+    <li><a href="#" class="cta" onclick="copyIP();return false">⚔ Připojit se</a></li>
   </ul>
   <div class="hbg" id="hbg" onclick="toggleMenu()"><span></span><span></span><span></span></div>
 </nav>
@@ -81,14 +307,14 @@ body{background:var(--bg);color:var(--ink);font-family:'Outfit',sans-serif;font-
         <span class="si-lbl">Online hráčů</span>
         <span class="si-val" id="cnt">—</span>
       </div>
-      <button class="ipcopy" onclick="copyIP(event)" title="Kopírovat IP">
+      <button class="ipcopy" onclick="copyIP()" title="Kopírovat IP">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2z"/></svg>
         including-washhouse.gl.joinmc.link
       </button>
     </div>
 
     <div class="hbtns">
-      <a href="#" class="btnp" onclick="copyIP(event)">
+      <a href="#" class="btnp" onclick="copyIP();return false">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M14 6l6 6-6 6"/></svg>
         Připojit se
       </a>
@@ -102,19 +328,145 @@ body{background:var(--bg);color:var(--ink);font-family:'Outfit',sans-serif;font-
 
 <div class="sep"></div>
 
-<!-- ... obsah zůstává stejný až po CTA-band ... -->
+<!-- FEATURES -->
+<section id="features">
+  <div class="sh rv">
+    <span class="sh-tag">// o serveru</span>
+    <h2 class="sh-title">Proč hrát u nás?</h2>
+    <div class="sh-line"></div>
+  </div>
+
+  <div class="mosaic rv">
+    <div class="fc">
+      <div class="chip chip-g">Economy</div>
+      <span class="fi">💰</span>
+      <h3>Economy systém</h3>
+      <p>Plnohodnotný ekonomický systém s LukSa Coins. Obchoduj, buduj impérium a staň se nejbohatším hráčem na serveru.</p>
+    </div>
+    <div class="fc">
+      <div class="chip chip-o">PvP</div>
+      <span class="fi">⚔️</span>
+      <h3>PvP v arénách</h3>
+      <p>PvP pouze v designovaných arénách. Ve světě jsi v bezpečí — soustřeď se na budování.</p>
+    </div>
+    <div class="fc">
+      <div class="chip chip-b">Ochrana</div>
+      <span class="fi">🏠</span>
+      <h3>Claim systém</h3>
+      <p>Ochraň svůj pozemek pomocí Residence systému. Nikdo ti nezničí co jsi postavil.</p>
+    </div>
+    <div class="fc">
+      <div class="chip chip-g">Obchod</div>
+      <span class="fi">🛒</span>
+      <h3>Player shopy</h3>
+      <p>Vytvoř si vlastní obchod a prodávej ostatním hráčům. Ekonomika tahu tvou komunitu.</p>
+    </div>
+    <div class="fc">
+      <div class="chip chip-o">Zábava</div>
+      <span class="fi">🏃</span>
+      <h3>Parkour</h3>
+      <p>Vydělávej LukSa Coins absolvováním parkour tratí. Zábava a zisk v jednom.</p>
+    </div>
+    <div class="fc">
+      <div class="chip chip-b">Komunita</div>
+      <span class="fi">🎯</span>
+      <h3>Eventy a soutěže</h3>
+      <p>Pravidelné eventy s hodnotnými odměnami. Aktivní komunita a férovost na prvním místě.</p>
+    </div>
+  </div>
+
+  <div class="story rv">
+    <p>Server <span class="hl">LukSa</span> vznikl z vášně dvou kamarádů, kteří chtěli vytvořit férové a přátelské economy prostředí pro českou a slovenskou komunitu. Cílem bylo poskytnout alternativu k ostatním serverům, kde ekonomika a spravedlnost nejsou prioritou.</p>
+    <p>Projekt postupně rostl a přibyly i další členové týmu. Dnes LukSa nabízí plnohodnotný economy survival zážitek s vlastním ekonomickým systémem, ochranou pozemků, player shopy a mnohem více.</p>
+  </div>
+</section>
+
+<div class="sep"></div>
+
+<!-- RULES -->
+<section id="rules" style="max-width:880px">
+  <div class="sh rv">
+    <span class="sh-tag">// pravidla serveru</span>
+    <h2 class="sh-title">Pravidla</h2>
+    <div class="sh-line"></div>
+    <p style="margin-top:1rem;color:var(--ink2);font-size:14px">Neznalost pravidel neomlouvá. Přečti si je před prvním přihlášením.</p>
+  </div>
+
+  <div class="rv">
+    <div class="acc"><div class="ah" onclick="tog(this)"><span class="acc-num">01</span><span class="acc-title">Obecná pravidla chování</span><span class="arr">▾</span></div><div class="ab2"><ul><li>Chování a komunikace jsou klíčové — buď přátelský a respektující ostatní hráče.</li><li>Nadávání, toxicita, rasismus, sexismus a podobné projevy nejsou tolerovány.</li><li>Spamování chatů, linků a opakovacích zpráv je zakázáno.</li></ul></div></div>
+    <div class="acc"><div class="ah" onclick="tog(this)"><span class="acc-num">02</span><span class="acc-title">Cheaty a zakázané modifikace</span><span class="arr">▾</span></div><div class="ab2"><ul><li>Hacking, cheaty, exploity a neautorizované modifikace jsou zakázány.</li><li>Pouze whitelisted modifikace jsou povoleny (např. Sodium, Lunar Client bez cheatu).</li><li>Porušení vede k okamžitému BAN bez varování.</li></ul></div></div>
+    <div class="acc"><div class="ah" onclick="tog(this)"><span class="acc-num">03</span><span class="acc-title">PvP pravidla</span><span class="arr">▾</span></div><div class="ab2"><ul><li>PvP je povoleno POUZE v designovaných PvP arenách.</li><li>PvP mimo arény vede k sankcím.</li><li>Kamikadžové a grief-PvP nejsou tolerovány.</li></ul></div></div>
+    <div class="acc"><div class="ah" onclick="tog(this)"><span class="acc-num">04</span><span class="acc-title">Griefing a krádež</span><span class="arr">▾</span></div><div class="ab2"><ul><li>Griefing (ničení staveb ostatních) je zakázán a bude trestán.</li><li>Krádež z ochráněných pozemků je nemožná (claim systém).</li><li>Krádež ze neochráněných oblastí je na vlastní riziko.</li></ul></div></div>
+    <div class="acc"><div class="ah" onclick="tog(this)"><span class="acc-num">05</span><span class="acc-title">Economy pravidla</span><span class="arr">▾</span></div><div class="ab2"><ul><li>Podvody, RMT (ničení currency IRL) a manipulace ekonomiky jsou zakázány.</li><li>Podstatný transfer coinů mezi účty bez justifikace bude vyšetřován.</li><li>Porušení ekonomických pravidel vede k bannutí a odebrání items.</li></ul></div></div>
+    <div class="acc"><div class="ah" onclick="tog(this)"><span class="acc-num">06</span><span class="acc-title">Komunikace a sociální sítě</span><span class="arr">▾</span></div><div class="ab2"><ul><li>Slušnost v chatu je povinná — žádného toxického chování.</li><li>Propagace konkurenčních serverů je zakázána.</li><li>NSFW obsah a politika jsou mimo Discord a server.</li></ul></div></div>
+    <div class="acc"><div class="ah" onclick="tog(this)"><span class="acc-num">07</span><span class="acc-title">Stavění a pozemky</span><span class="arr">▾</span></div><div class="ab2"><ul><li>Claimnout si můžeš pozemek, kde jej ještě nikdo nemá.</li><li>Opuštěné stavby delší než 30 dní bez aktivity mohou být smazány.</li><li>Soubory s redundantnými stavbami budou odstraněny.</li></ul></div></div>
+    <div class="acc"><div class="ah" onclick="tog(this)"><span class="acc-num">08</span><span class="acc-title">Účty a bezpečnost</span><span class="arr">▾</span></div><div class="ab2"><ul><li>Každý hráč má jeden jediný účet — více účtů bude bannutí.</li><li>Prodej a sdílení účtů není povoleno.</li><li>Admin nekontrolují hesla — měj si je v bezpečí!</li></ul></div></div>
+    <div class="acc"><div class="ah" onclick="tog(this)"><span class="acc-num">09</span><span class="acc-title">Sankce a odvolání</span><span class="arr">▾</span></div><div class="ab2"><ul><li>Varování → Mute → Kick → Ban (dle závažnosti).</li><li>Permanentní bany jsou vydávány za kritické porušení pravidel.</li><li>Odvolání se podávají přes Discord — kontaktuj Admin.</li><li class="pen">⚠ Pravidla se mohou změnit — sleduj Discord pro aktualizace!</li></ul></div></div>
+  </div>
+</section>
+
+<div class="sep"></div>
+
+<!-- TEAM -->
+<section id="team">
+  <div class="sh rv"><span class="sh-tag">// náš tým</span><h2 class="sh-title">Tým LukSa</h2><div class="sh-line"></div></div>
+  <div class="tgrid rv">
+    <div class="tcard own"><div class="tav">👑</div><div class="tname">lubi_6498</div><div class="trole r-own">Majitel</div></div>
+    <div class="tcard co"><div class="tav">🛡️</div><div class="tname">Samik33</div><div class="trole r-co">Spolumajitel</div></div>
+    <div class="tcard adm"><div class="tav">⚔️</div><div class="tname">paik_cz</div><div class="trole r-adm">Admin</div></div>
+  </div>
+</section>
+
+<div class="sep"></div>
+
+<!-- SOCIAL -->
+<section id="social">
+  <div class="sh rv"><span class="sh-tag">// připoj se k nám</span><h2 class="sh-title">Sociální sítě</h2><div class="sh-line"></div></div>
+  <div class="sgrid rv">
+    <a href="https://discord.gg/k8VsYdkRwz" target="_blank" class="sc2 dc"><span class="sico">💬</span><div class="sname">Discord</div><div class="sdesc">Podpora, eventy, komunita</div></a>
+    <a href="#" class="sc2 wa" style="opacity:.4;cursor:default"><span class="sico">📱</span><div class="sname">WhatsApp</div><div class="sdesc">Již brzy...</div></a>
+    <a href="https://www.instagram.com/luksa_server/" target="_blank" class="sc2 ig"><span class="sico">📸</span><div class="sname">Instagram</div><div class="sdesc">Fotky a updaty</div></a>
+  </div>
+  <p style="margin-top:2rem;text-align:center;color:var(--ink2);font-size:14px">Problémy nebo dotazy? Kontaktuj nás přes Discord — nejrychlejší odpověď garantována.</p>
+</section>
+
+<div class="sep"></div>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="sh rv"><span class="sh-tag">// jak začít</span><h2 class="sh-title">Časté dotazy</h2><div class="sh-line"></div></div>
+  <div class="fgrid rv">
+    <div class="fi2"><div class="fq"><span class="fqm">?</span>Jak se přihlásím?</div><div class="fa">Po připojení napiš <code>/register heslo heslo</code> pro registraci. Při každém dalším připojení se přihlaš přes <code>/login heslo</code>.</div></div>
+    <div class="fi2"><div class="fq"><span class="fqm">?</span>Jak si claimnout pozemek?</div><div class="fa">Vezmi dřevěnou sekeru, levým klikem označ první roh, pravým druhý, pak napiš <code>/res create název</code> pro vytvoření claimu.</div></div>
+    <div class="fi2"><div class="fq"><span class="fqm">?</span>Jak otevřít vlastní shop?</div><div class="fa">Postav truhlici, dej vedle cedulku: tvoje jméno / množství / B cena ? / název itemu. Prodeji spustí automaticky!</div></div>
+    <div class="fi2"><div class="fq"><span class="fqm">?</span>Kde jsou PvP arény?</div><div class="fa">PvP arény najdeš v lobby světě. Použij NPC portál nebo <code>/warp arena</code> pro teleportaci. Mimo arény je PvP zakázán!</div></div>
+    <div class="fi2"><div class="fq"><span class="fqm">?</span>Jak získám LukSa Coins?</div><div class="fa">Prodávej itemy, absolvuj parkour trasy, zúčastni se eventů nebo obchoduj s ostatními hráči. Začni s 500 coinů!</div></div>
+    <div class="fi2"><div class="fq"><span class="fqm">?</span>Jaké verze Minecraftu fungují?</div><div class="fa">Server podporuje verze 1.16 až 1.21+. Doporučujeme aktuální verzi pro nejlepší výkon a kompatibilitu.</div></div>
+  </div>
+</section>
 
 <!-- CTA BAND -->
 <div class="cta-band rv" style="padding-left:2rem;padding-right:2rem">
   <h2>Připoj se ještě dnes</h2>
   <p>Čeká na tebe ekonomika, komunita a spousta zábavy.</p>
   <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
-    <a href="#" class="btnp" onclick="copyIP(event)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M14 6l6 6-6 6"/></svg> Připojit se</a>
+    <a href="#" class="btnp" onclick="copyIP();return false"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M14 6l6 6-6 6"/></svg> Připojit se</a>
     <a href="https://discord.gg/k8VsYdkRwz" target="_blank" class="btns">Připojit Discord</a>
   </div>
 </div>
 
-<!-- ... obsah zůstává stejný ... -->
+<!-- FOOTER -->
+<footer>
+  <div class="flogo">Luk<em>Sa</em></div>
+  <div class="ftag">Český Economy Minecraft Server</div>
+  <div class="flinks">
+    <a href="#home">Domov</a><a href="#features">O serveru</a><a href="#rules">Pravidla</a><a href="#team">Tým</a><a href="#social">Kontakt</a><a href="#faq">FAQ</a><a href="#">GDPR</a>
+  </div>
+  <p class="fgdpr">Zpracování osobních údajů probíhá v souladu s GDPR. Server uchovává pouze přihlašovací údaje nezbytné pro provoz. Kontakt: Discord server.</p>
+  <div class="fcopy">© 2026 LukSa — lubi_6498, Samik33, paik_cz</div>
+</footer>
+
+<div class="toast" id="toast">✓ IP zkopírována!</div>
 
 <script>
 const cv=document.getElementById('cv'),cx=cv.getContext('2d');
@@ -152,8 +504,7 @@ async function status(){
 }
 status();setInterval(status,30000);
 
-function copyIP(event){
-  if(event) event.preventDefault();
+function copyIP(){
   navigator.clipboard.writeText('including-washhouse.gl.joinmc.link').then(()=>{
     const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2600);
   });
